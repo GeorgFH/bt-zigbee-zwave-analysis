@@ -1,2 +1,2 @@
-# bt-zigbee-zwave-analysis
-Zigbee versus Z-Wave:  Latenz, Interoperabilität und Integrationsfähigkeit in Smart Home Systemen mit openHAB
+# Zigbee versus Z-Wave:  Latenz, Interoperabilität und Integrationsfähigkeit in Smart Home Systemen mit openHAB
+Readme wird in weiterer Folge noch ausgeführt...
