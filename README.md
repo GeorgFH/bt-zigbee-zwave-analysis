@@ -65,7 +65,7 @@ dieses Repositories.
 
 Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, 
 auf dem auch openHAB und die weiteren Systemkomponenten betrieben wurden. 
-Es basiert auf einer Standard-Python-3-Installation ausgeführt und
+Es basiert auf einer Standard-Python-3-Installation und
 verwendet die Bibliothek `pandas` zur Verarbeitung der Zeitreihendaten.
 Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht
 erforderlich.
