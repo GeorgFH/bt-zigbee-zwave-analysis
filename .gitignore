@@ -1,0 +1,22 @@
+# IDE configuration files (Globale Ignorierung)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# Abhaengigkeiten & Build
+node_modules/
+dist/
+build/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Lokale Umgebungsvariablen
+.env
