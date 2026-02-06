@@ -8,9 +8,9 @@ Ziel des Repositories ist es, den im Rahmen der Bachelorarbeit durchgeführten e
 
 Ziel der Bachelorarbeit ist es, die Kommunikationsprotokolle Zigbee und Z-Wave hinsichtlich ihrer Eignung für den Einsatz in Smart Home Systemen empirisch zu untersuchen. Der Fokus liegt dabei insbesondere auf den Aspekten: 
 
-- **Latenz** (Feldexperiment im Intra-Binding),
-- **Interoperabilität** (Cross-Binding-Szenarien),
-- **Integrationsfähigkeit** (Konfigurations- und Einrichtungsaufwand)
+- **Latenz**,
+- **Interoperabilität**,
+- und **Integrationsfähigkeit**
 
 innerhalb einer offenen Smart Home Plattform auf Basis von openHAB.
 
@@ -28,7 +28,7 @@ Dieses Repository ergänzt die Bachelorarbeit um folgende technische Artefakte:
 
 - Dokumentation des **technischen Versuchsaufbaus**
 - verwendetes **Python-Skript** zur Datenerfassung und Klassifikation
-- **unveränderte Rohdaten** der Latenzmessungen
+- **Rohdaten** der Latenzmessungen
 - relevante **Konfigurationsdateien** der eingesetzten Systeme
 
 Die statistische Auswertung, Interpretation und Diskussion der Messergebnisse erfolgen ausschließlich in der Bachelorarbeit und sind daher **nicht Bestandteil** dieses Repositories.
@@ -38,20 +38,20 @@ Das Repository stellt alle wesentlichen technischen Informationen bereit, um den
 ## Repository-Struktur
 
 - `docs/`  
-  Technische Dokumentation zur Systemintegration (Hardware, Software, Kommunikationsstruktur, openHAB-Konfiguration).
+  Technische Dokumentation der empirischen Umsetzung (Hardware, Software, Kommunikationsstruktur, openHAB-Konfiguration).
 
 - `scripts/`  
-  Python-Skript zur automatisierten Auswertung der in InfluxDB erfassten Zeitstempel und zur Klassifikation der Schaltvorgänge.
+  Python-Skript zur automatisierten Latenzberechnung der in InfluxDB erfassten Zeitstempel und zur Klassifikation der Schaltvorgänge.
 
 - `data/`  
-  CSV-Dateien mit den unveränderten Rohdaten der im Feldexperiment erhobenen Latenzmessungen (Intra-Binding).
+  CSV-Dateien mit den unveränderten Rohdaten der erhobenen Messungen.
 
 - `config/`  
-  Ausgewählte Konfigurationsdateien (z. B. openHAB, Zigbee2MQTT), die für das   Verständnis des Versuchsaufbaus relevant sind.
+  Ausgewählte Konfigurationsdateien, die für das Verständnis der Umsetzung im Versuchsaufbaus relevant sind.
 
 ## Python-Skript
 
-Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, auf dem auch openHAB und die weiteren Systemkomponenten betrieben wurden. Es basiert auf einer Standard-Python-3-Installation und verwendet die Bibliothek `pandas` zur Verarbeitung der Zeitreihendaten. Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht erforderlich.
+Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, auf dem auch openHAB, die InfluxDB und die weiteren notwendigen Systemkomponenten betrieben wurden. Es basiert auf einer Standard-Python-3-Installation und verwendet die Bibliothek `pandas` zur Verarbeitung der Zeitreihendaten. Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht erforderlich.
 
 ## Lizenz
 
