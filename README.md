@@ -4,7 +4,7 @@ Dieses Repository enthält die technischen Artefakte zur Bachelorarbeit **„Zig
 
 Ziel des Repositories ist es, den im Rahmen der Bachelorarbeit durchgeführten empirischen Versuchsaufbau sowie die Datenerhebung nachvollziehbar zu dokumentieren. Die hier bereitgestellten Inhalte dienen der Reproduzierbarkeit und Transparenz des durchgeführten Feldexperiments und der Fallstudie.
 
-## Wissenschaftliche Einordnung
+## Ziel und Fragestellung
 
 Ziel der Bachelorarbeit ist es, die Kommunikationsprotokolle Zigbee und Z-Wave hinsichtlich ihrer Eignung für den Einsatz in Smart Home Systemen empirisch zu untersuchen. Der Fokus liegt dabei insbesondere auf den Aspekten: 
 
@@ -12,7 +12,7 @@ Ziel der Bachelorarbeit ist es, die Kommunikationsprotokolle Zigbee und Z-Wave h
 - **Interoperabilität** (Cross-Binding-Szenarien),
 - **Integrationsfähigkeit** (Konfigurations- und Einrichtungsaufwand)
 
-innerhalb einer offenen Smart-Home-Plattform auf Basis von openHAB.
+innerhalb einer offenen Smart Home Plattform auf Basis von openHAB.
 
 Die zentrale Forschungsfrage lautet:
 
@@ -33,6 +33,8 @@ Dieses Repository ergänzt die Bachelorarbeit um folgende technische Artefakte:
 
 Die statistische Auswertung, Interpretation und Diskussion der Messergebnisse erfolgen ausschließlich in der Bachelorarbeit und sind daher **nicht Bestandteil** dieses Repositories.
 
+Das Repository stellt alle wesentlichen technischen Informationen bereit, um den Versuchsaufbau und die Datenerhebung nachvollziehen zu können. Abweichungen in konkreten Hardware-, Funk- oder Umgebungsbedingungen können zu unterschiedlichen Messergebnissen führen.
+
 ## Repository-Struktur
 
 - `docs/`  
@@ -50,14 +52,6 @@ Die statistische Auswertung, Interpretation und Diskussion der Messergebnisse er
 ## Python-Skript
 
 Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, auf dem auch openHAB und die weiteren Systemkomponenten betrieben wurden. Es basiert auf einer Standard-Python-3-Installation und verwendet die Bibliothek `pandas` zur Verarbeitung der Zeitreihendaten. Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht erforderlich.
-
-## Reproduzierbarkeit und Einschränkungen
-
-Das Repository stellt alle wesentlichen technischen Informationen bereit, um den Versuchsaufbau und die Datenerhebung nachvollziehen zu können. Abweichungen in konkreten Hardware-, Funk- oder Umgebungsbedingungen können zu unterschiedlichen Messergebnissen führen.
-
-## Zielgruppe
-
-Das Repository richtet sich primär an Fachleute und Expert:innen aus den Bereichen IoT und Smart Home Systeme sowie an Studierende der Informations- und Kommunikationstechnologien, die sich mit der Performance und Integration heterogener Smart-Home-Protokolle befassen.
 
 ## Lizenz
 
