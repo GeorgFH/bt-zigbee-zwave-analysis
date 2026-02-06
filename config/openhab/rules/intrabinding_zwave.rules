@@ -1,0 +1,12 @@
+var actionStr = items["Z_Wave_Button"]?.state?.toString();
+console.log("Rule triggered: button value = " + actionStr);
+
+if (actionStr === "0") {
+  console.log("Action: value 0 → switching plug ON");
+  items["ZWave_Plug_OnOff"].sendCommand("ON");
+} else if (actionStr === "3") {
+  console.log("Action: value 3 → switching plug OFF");
+  items["ZWave_Plug_OnOff"].sendCommand("OFF");
+} else {
+  console.log("Action '" + actionStr + "' is ignored.");
+}

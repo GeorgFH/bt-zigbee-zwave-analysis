@@ -1,0 +1,13 @@
+console.log("Rule triggered: action = " + items["Zigbee_Smart_Button_01_Button_Action"].state);
+
+var action = items["Zigbee_Smart_Button_01_Button_Action"].state;
+
+if (action === "single") {
+  console.log("Action: single → switching plug ON");
+  items["ZigbeePlugE2_Switch"].sendCommand("ON");
+} else if (action === "double") {
+  console.log("Action: double → switching plug OFF");
+  items["ZigbeePlugE2_Switch"].sendCommand("OFF");
+} else {
+  console.log("Action '" + action + "' is ignored.");
+}

@@ -1,0 +1,12 @@
+var actionStr = items["Z_Wave_Button"]?.state?.toString();
+console.log("Cross-binding Z-Wave → Zigbee | Button action = " + actionStr);
+
+if (actionStr === "0") {
+  console.log("Action: 0 → switching Zigbee plug ON");
+  items["ZigbeePlugE2_Switch"].sendCommand("ON");
+} else if (actionStr === "3") {
+  console.log("Action: 3 → switching Zigbee plug OFF");
+  items["ZigbeePlugE2_Switch"].sendCommand("OFF");
+} else {
+  console.log("Action '" + actionStr + "' is ignored.");
+}
