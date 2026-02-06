@@ -28,7 +28,7 @@ Dieses Repository ergänzt die Bachelorarbeit um folgende technische Artefakte:
 
 - Dokumentation des **technischen Versuchsaufbaus**
 - verwendetes **Python-Skript** zur Datenerfassung und Klassifikation
-- **Rohdaten** der Latenzmessungen
+- **Rohdaten** und **technisch aufbereitete CSV-Messdaten** der Latenzmessungen
 - relevante **Konfigurationsdateien** der eingesetzten Systeme
 
 Die statistische Auswertung, Interpretation und Diskussion der Messergebnisse erfolgen ausschließlich in der Bachelorarbeit und sind daher **nicht Bestandteil** dieses Repositories.
@@ -38,20 +38,20 @@ Das Repository stellt alle wesentlichen technischen Informationen bereit, um den
 ## Repository-Struktur
 
 - `docs/`  
-  Technische Dokumentation der empirischen Umsetzung (Hardware, Software, Kommunikationsstruktur, openHAB-Konfiguration).
+  Technische Dokumentation der empirischen Umsetzung sowie ergänzende Diagramme.
 
 - `scripts/`  
-  Python-Skript zur automatisierten Latenzberechnung der in InfluxDB erfassten Zeitstempel und zur Klassifikation der Schaltvorgänge.
+  Python-Skript zur automatisierten Latenzberechnung, zeitlichen Zuordnung und Klassifikation der Schaltvorgänge.
 
 - `data/`  
-  CSV-Dateien mit den unveränderten Rohdaten der erhobenen Messungen.
+  Rohdaten sowie technisch aufbereitete CSV-Dateien der durchgeführten Messdurchgänge.
 
-- `config/`  
-  Ausgewählte Konfigurationsdateien, die für das Verständnis der Umsetzung im Versuchsaufbau relevant sind.
+- `config/openhab/rules/`  
+   openHAB Rules zur technischen Umsetzung der Intra-Binding- und Cross-Binding-Szenarien.
 
 ## Python-Skript
 
-Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, auf dem auch openHAB, die InfluxDB und die weiteren notwendigen Systemkomponenten betrieben wurden. Es basiert auf einer Standard-Python-3-Installation und verwendet die Bibliothek `pandas` zur Verarbeitung der Zeitreihendaten. Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht erforderlich.
+Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry Pi ausgeführt, auf dem auch openHAB, die InfluxDB sowie die weiteren notwendigen Systemkomponenten betrieben wurden. Es basiert auf einer Standard-Python-3-Installation und verwendet die Bibliothek `pandas` zur Verarbeitung der aus der InfluxDB ausgelesenen Zeitreihendaten. Das Skript übernimmt die zeitliche Zuordnung von Button- und Aktorereignissen, berechnet die Latenzen, klassifiziert die Schaltvorgänge und exportiert die Ergebnisse in strukturierter Form als CSV-Dateien. Eine lauffähige Entwicklungsumgebung ist für das Verständnis des Skripts nicht erforderlich.
 
 ## Lizenz
 
