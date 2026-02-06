@@ -47,7 +47,7 @@ Das Repository stellt alle wesentlichen technischen Informationen bereit, um den
   CSV-Dateien mit den unveränderten Rohdaten der erhobenen Messungen.
 
 - `config/`  
-  Ausgewählte Konfigurationsdateien, die für das Verständnis der Umsetzung im Versuchsaufbaus relevant sind.
+  Ausgewählte Konfigurationsdateien, die für das Verständnis der Umsetzung im Versuchsaufbau relevant sind.
 
 ## Python-Skript
 
@@ -55,4 +55,4 @@ Das Python-Skript wurde im Rahmen des Versuchsaufbaus direkt auf dem Raspberry P
 
 ## Lizenz
 
-Dieses Repository steht unter der MIT License.
+Dieses Repository steht unter der MIT-Lizenz.
