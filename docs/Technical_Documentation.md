@@ -390,13 +390,12 @@ Analog dazu wurden für die Z-Wave-Komponenten die folgenden MQTT-Things definie
 
 Die Verarbeitung der bereitgestellten Zustands- und Ereignisdaten erfolgte nicht auf Thing-Ebene, sondern ausschließlich über die zugehörigen Channels.
 
-Durch die getrennte Definition der MQTT-Things für Zigbee- und Z-Wave-Geräte wurde eine klare und nachvollziehbare Struktur innerhalb von openHAB geschaffen. Diese Struktur bildete die Grundlage für die nachfolgende Definition der Channels sowie der darauf aufbauenden Items und Rules.
 
 ### 7.3 Channels
 
 Nach der Definition der MQTT-Things wurden in openHAB die zugehörigen Channels angelegt. Die Channels stellen die konkrete Verbindung zwischen einem MQTT-Thing und MQTT-Nachrichten dar und definieren, wie eingehende Werte innerhalb von openHAB verarbeitet werden bzw. wie Steuerbefehle über MQTT gesendet werden. Im Versuchsaufbau wurden die Channels manuell konfiguriert, wobei je nach Gerätetyp unterschiedliche Channel-Typen verwendet wurden.
 
-Für die Taster wurden die Channels als reine State-Verarbeitung konfiguriert, da die Geräte ausschließlich eingehende Ereignisse liefern und keine Steuerbefehle über MQTT entgegennehmen. Der Zigbee-Taster wurde über einen Channel vom Typ String abgebildet, da die von Zigbee2MQTT bereitgestellten Aktionswerte als Textwerte geliefert wurden. Der Z-Wave-Taster wurde über einen Channel vom Typ Number/Point abgebildet, da die von Z-Wave JS UI bereitgestellten Ereignisse als numerische Werte vorlagen.
+Für die Taster wurden die Channels als reine State-Verarbeitung konfiguriert, da die Geräte ausschließlich eingehende Ereignisse liefern und keine Steuerbefehle über MQTT entgegennehmen. Der Zigbee-Taster wurde über einen Channel vom Typ String abgebildet, da die bereitgestellten Aktionswerte von Zigbee2MQTT als Textwerte geliefert wurden. Der Z-Wave-Taster wurde über einen Channel vom Typ Number/Point abgebildet, da von Z-Wave JS UI numerische Werte vorlagen.
 
 Für die Aktoren wurden Channels vom Typ On/Off Switch definiert. Dadurch konnten die Aktoren innerhalb von openHAB als schaltbare Geräte abgebildet und über Steuerbefehle angesteuert werden. Für die Aktoren wurden jeweils sowohl ein State Topic zur Verarbeitung des aktuellen Schaltzustands als auch ein Command Topic zur Übermittlung von Schaltbefehlen konfiguriert.
 
@@ -404,7 +403,7 @@ Die für die Channel-Konfiguration erforderlichen Topics wurden den MQTT-Nachric
 
 Da die MQTT-Payloads der Buttons als strukturierte JSON-Nachrichten vorlagen, wurde auf Channel-Ebene eine Incoming Value Transformation konfiguriert (JSONPATH:$.action). Zusätzlich wurden bei den Channels der Aktoren benutzerdefinierte Werte für ON und OFF gesetzt, um eine konsistente Zuordnung zwischen MQTT-Payload und openHAB-Schaltzuständen sicherzustellen.
 
-Zur Verifikation der von den Tastern und Aktoren publizierten MQTT-Nachrichten wurden die entsprechenden Topics direkt am MQTT-Broker mitgelesen. Hierzu wurden die mit Eclipse Mosquitto mitgelieferten Kommandozeilenwerkzeuge verwendet.
+Zur Verifikation der von den Tastern und Aktoren publizierten MQTT-Nachrichten wurden die entsprechenden Topics direkt am MQTT-Broker mitgelesen. Hierzu wurden die folgenden Kommandozeilenwerkzeuge von Eclipse Mosquitto verwendet.
 
 ```bash
 mosquitto_sub -h localhost -t zigbee2mqtt/# -v
@@ -413,7 +412,7 @@ mosquitto_sub -h localhost -t zwave2mqtt/# -v
 
 Über diese Befehle konnten die von Zigbee2MQTT bzw. Z-Wave JS UI veröffentlichten Topics und Payloads eingesehen und für die Konfiguration der Channels in openHAB herangezogen werden.
 
-Durch diese Channel-Konfiguration standen die Ereignisse der Taster sowie die Zustände und Steuerungsmöglichkeiten der Aktoren in openHAB in einer einheitlichen Form zur Verfügung und konnten im nächsten Schritt über Items weiter abstrahiert werden.
+Durch diese Channel-Konfiguration standen die Ereignisse der Taster sowie die Zustände und Steuerungsmöglichkeiten der Aktoren in openHAB in einer einheitlichen Form zur Verfügung und konnten im nächsten Schritt über Items weiter definiert werden.
 
 ### 7.4 Items
 
@@ -450,19 +449,19 @@ Items {
 
 Durch diese Konfiguration wurden die Ereignisse der Buttons sowie die Zustandsänderungen der Aktoren kontinuierlich als Zeitreihendaten gespeichert. Die InfluxDB diente dabei ausschließlich als Datenspeicher. Eine direkte Auswertung oder Weiterverarbeitung der Daten erfolgte nicht innerhalb von openHAB.
 
-### 7.6 Rules
+### 7.6 Regeln
 
-Nach der Definition der Items wurden in openHAB vier Rules umgesetzt, um die Schaltlogik für die Intra-Binding- und Cross-Binding-Szenarien technisch abzubilden. Zwei Rules realisierten Intra-Binding-Szenarien innerhalb desselben Funkprotokolls, zwei weitere Rules dienten der protokollübergreifenden Kopplung (Cross-Binding).
+Nach der Definition der Items wurden in openHAB vier Regeln umgesetzt, um die Schaltlogik für die Intra-Binding- und Cross-Binding-Szenarien technisch abzubilden. Zwei Regeln realisierten Intra-Binding-Szenarien innerhalb desselben Funkprotokolls, zwei weitere Regeln dienten der protokollübergreifenden Kopplung (Cross-Binding).
 
-Alle Rules folgten demselben Grundschema. Als Auslöser diente jeweils ein Item-Update eines Button-Items. Bei Eintreten des Triggers wurde ein Inline-Skript ausgeführt, das den aktuellen Button-Wert auswertete und abhängig davon einen Schaltbefehl an den zugehörigen Aktor sendete. Die Umsetzung erfolgte vollständig auf Item-Ebene innerhalb von openHAB.
+Alle Regeln folgten demselben Grundschema. Als Auslöser diente jeweils ein Item-Update eines Button-Items. Bei Eintreten des Triggers wurde ein Inline-Skript ausgeführt, das den aktuellen Button-Wert auswertete und abhängig davon einen Schaltbefehl an den zugehörigen Aktor sendete. Die Umsetzung erfolgte vollständig auf Item-Ebene innerhalb von openHAB.
 
-Für die Intra-Binding-Szenarien wurden je eine Rule für Zigbee und Z-Wave definiert. Ereignisse des Zigbee-Buttons führten dabei zu Schaltbefehlen am Zigbee-Aktor, während Ereignisse des Z-Wave-Buttons den Z-Wave-Aktor steuerten. Die Interpretation der Button-Ereignisse erfolgte abhängig vom jeweiligen Datenformat: Beim Zigbee-Button wurden textuelle Aktionswerte ausgewertet, beim Z-Wave-Button numerische Werte.
+Für die Intra-Binding-Szenarien wurden je eine Regel für Zigbee und Z-Wave definiert. Ereignisse des Zigbee-Buttons führten dabei zu Schaltbefehlen am Zigbee-Aktor, während Ereignisse des Z-Wave-Buttons den Z-Wave-Aktor steuerten. Die Interpretation der Button-Ereignisse erfolgte abhängig vom jeweiligen Datenformat (beim Zigbee-Button wurden textuelle Aktionswerte ausgewertet, beim Z-Wave-Button numerische Werte).
 
-Für die Cross-Binding-Szenarien wurden zwei weitere Rules definiert, die nach demselben Schema arbeiteten. In diesen Rules lösten Ereignisse des Zigbee-Buttons Schaltbefehle am Z-Wave-Aktor aus, während Ereignisse des Z-Wave-Buttons den Zigbee-Aktor steuerten. Die Zuordnung der Schaltbefehle erfolgte identisch zu den Intra-Binding-Rules, lediglich das jeweils angesprochene Aktor-Item unterschied sich.
+Für die Cross-Binding-Szenarien wurden zwei weitere Regeln definiert, die nach demselben Schema arbeiteten. In diesen Regeln lösten Ereignisse des Zigbee-Buttons Schaltbefehle am Z-Wave-Aktor aus, während Ereignisse des Z-Wave-Buttons den Zigbee-Aktor steuerten. Die Zuordnung der Schaltbefehle erfolgte identisch zu den Intra-Binding-Regeln, lediglich das jeweils angesprochene Aktor-Item unterschied sich.
 
-Innerhalb der Rules wurde zusätzlich eine einfache Protokollierung umgesetzt, um ausgelöste Ereignisse und resultierende Schaltbefehle nachvollziehbar zu machen. Nicht relevante oder unbekannte Button-Werte wurden explizit ignoriert und führten zu keiner Aktion.
+Innerhalb der Regeln wurde zusätzlich eine einfache Protokollierung umgesetzt, um ausgelöste Ereignisse und resultierende Schaltbefehle nachvollziehbar zu machen. Nicht relevante oder unbekannte Button-Werte wurden explizit ignoriert und führten zu keiner Aktion.
 
-Die Rules enthielten ausschließlich die technische Logik zur Weiterleitung von Button-Ereignissen an die entsprechenden Aktoren und realisierten damit die Intra- und Cross-Binding-Szenarien im Versuchsaufbau.
+Die Regeln enthielten ausschließlich die technische Logik zur Weiterleitung von Button-Ereignissen an die entsprechenden Aktoren und realisierten damit die Intra- und Cross-Binding-Szenarien im Versuchsaufbau.
 
 ## 8. Datenerfassung und -aufbereitung
 
