@@ -1,0 +1,49 @@
+attempt_id;experiment_mode;distance_m;button_label;plug_label;button_time;plug_time;latency_ms;status
+intrabinding_1m_001;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:17.535000;2026-02-03 13:29:17.583000;48;SUCCESS
+intrabinding_1m_002;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:20.522000;2026-02-03 13:29:20.526000;4;SUCCESS
+intrabinding_1m_003;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:24.024000;2026-02-03 13:29:24.031000;7;SUCCESS
+intrabinding_1m_004;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:27.749000;2026-02-03 13:29:27.756000;7;SUCCESS
+intrabinding_1m_005;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:31.420000;2026-02-03 13:29:31.425000;5;SUCCESS
+intrabinding_1m_006;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:34.816000;2026-02-03 13:29:34.833000;17;SUCCESS
+intrabinding_1m_007;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:38.581000;2026-02-03 13:29:38.589000;8;SUCCESS
+intrabinding_1m_008;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:42.508000;2026-02-03 13:29:42.510000;2;SUCCESS
+intrabinding_1m_009;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:46.407000;2026-02-03 13:29:46.417000;10;SUCCESS
+intrabinding_1m_010;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:50.148000;2026-02-03 13:29:50.154000;6;SUCCESS
+intrabinding_1m_011;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:53.765000;2026-02-03 13:29:53.769000;4;SUCCESS
+intrabinding_1m_012;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:29:57.700000;2026-02-03 13:29:57.710000;10;SUCCESS
+intrabinding_1m_013;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:01.722000;2026-02-03 13:30:01.727000;5;SUCCESS
+intrabinding_1m_014;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:05.931000;2026-02-03 13:30:05.938000;7;SUCCESS
+intrabinding_1m_015;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:09.877000;2026-02-03 13:30:09.882000;5;SUCCESS
+intrabinding_1m_016;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:13.535000;2026-02-03 13:30:13.539000;4;SUCCESS
+intrabinding_1m_017;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:17.332000;2026-02-03 13:30:17.336000;4;SUCCESS
+intrabinding_1m_018;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:21.743000;2026-02-03 13:30:21.748000;5;SUCCESS
+intrabinding_1m_019;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:25.554000;2026-02-03 13:30:25.561000;7;SUCCESS
+intrabinding_1m_020;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:29.501000;2026-02-03 13:30:29.505000;4;SUCCESS
+intrabinding_1m_021;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:33.252000;2026-02-03 13:30:33.269000;17;SUCCESS
+intrabinding_1m_022;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:37.051000;2026-02-03 13:30:37.058000;7;SUCCESS
+intrabinding_1m_023;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:41.279000;2026-02-03 13:30:41.283000;4;SUCCESS
+intrabinding_1m_024;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:45.291000;2026-02-03 13:30:45.299000;8;SUCCESS
+intrabinding_1m_025;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:49.270000;2026-02-03 13:30:49.273000;3;SUCCESS
+intrabinding_1m_026;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:54.739000;2026-02-03 13:30:54.747000;8;SUCCESS
+intrabinding_1m_027;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:30:58.634000;2026-02-03 13:30:58.640000;6;SUCCESS
+intrabinding_1m_028;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:31:02.839000;2026-02-03 13:31:02.843000;4;SUCCESS
+intrabinding_1m_029;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:31:06.860000;2026-02-03 13:31:06.867000;7;SUCCESS
+intrabinding_1m_030;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:31:18.470000;2026-02-03 13:31:18.474000;4;SUCCESS
+intrabinding_1m_031;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:31:21.781000;2026-02-03 13:31:21.793000;12;SUCCESS
+intrabinding_1m_032;intrabinding;1;Zigbee_Smart_Button_01_Button_Action;ZigbeePlugE2_Switch;2026-02-03 13:31:24.075000;2026-02-03 13:31:24.079000;4;SUCCESS
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;

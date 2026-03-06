@@ -11,9 +11,9 @@ from datetime import datetime
 
 EXPERIMENT_MODE = "intrabinding"  # intrabinding | crossbinding
 DISTANCE_M = 1  # e.g. 1 | 5 | 10
-MAX_SUCCESS_MS = 250  # maximum latency for successful switching
-MAX_ASSOCIATION_MS = 1000  # maximum latency for causal association
-MAX_OBSERVATION_MS = 5000  # maximum observation window
+MAX_SUCCESS_MS = 200  # maximum latency for successful switching
+MAX_ASSOCIATION_MS = 1270  # maximum latency for causal association
+MAX_OBSERVATION_MS = 2540  # maximum observation window
 CSV_OUTPUT_PATH = "/home/georg/Shared"
 
 
