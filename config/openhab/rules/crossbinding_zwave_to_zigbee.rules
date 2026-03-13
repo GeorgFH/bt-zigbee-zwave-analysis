@@ -1,4 +1,4 @@
-var actionStr = items["Z_Wave_Button"]?.state?.toString();
+var actionStr = items["Z_Wave_Button"].state.toString();
 console.log("Cross-binding Z-Wave → Zigbee | Button action = " + actionStr);
 
 if (actionStr === "0") {

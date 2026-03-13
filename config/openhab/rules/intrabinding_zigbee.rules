@@ -1,6 +1,5 @@
-console.log("Rule triggered: action = " + items["Zigbee_Smart_Button_01_Button_Action"].state);
-
 var action = items["Zigbee_Smart_Button_01_Button_Action"].state;
+console.log("Rule triggered: action = " + items["Zigbee_Smart_Button_01_Button_Action"].state);
 
 if (action === "single") {
   console.log("Action: single → switching plug ON");

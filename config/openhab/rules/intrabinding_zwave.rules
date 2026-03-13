@@ -1,4 +1,4 @@
-var actionStr = items["Z_Wave_Button"]?.state?.toString();
+var actionStr = items["Z_Wave_Button"].state.toString();
 console.log("Rule triggered: button value = " + actionStr);
 
 if (actionStr === "0") {
