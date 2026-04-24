@@ -28,7 +28,7 @@ Dieses Repository ergänzt die Bachelorarbeit um folgende technische Artefakte:
 
 - Dokumentation des **technischen Versuchsaufbaus**
 - verwendetes **Python-Skript** zur Datenerfassung und Klassifikation
-- **Rohdaten** (CSV-Dateien) der Latenzmessungen
+- **Rohdaten** (CSV-Dateien) der Messungen
 - relevante **Konfigurationsdateien** der eingesetzten Systeme
 
 Die statistische Auswertung, Interpretation und Diskussion der Messergebnisse erfolgen ausschließlich in der Bachelorarbeit und sind daher **nicht Bestandteil** dieses Repositories.
