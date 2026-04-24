@@ -44,7 +44,7 @@ Das Repository stellt alle wesentlichen technischen Informationen bereit, um den
   Python-Skript zur automatisierten Latenzberechnung, zeitlichen Zuordnung und Klassifikation der Schaltvorgänge.
 
 - `data/`  
-  Rohdaten sowie technisch aufbereitete CSV-Dateien der durchgeführten Messdurchgänge.
+  Rohdaten (CSV-Dateien) der durchgeführten Messdurchgänge.
 
 - `config/openhab/rules/`  
    openHAB Rules zur technischen Umsetzung der Intra-Binding- und Cross-Binding-Szenarien.
