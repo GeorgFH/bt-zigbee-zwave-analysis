@@ -76,7 +76,7 @@ sudo apt update
 sudo apt install openhab
 ```
 
-Nach der Installation wurde der openHAB-Dienst aktiviert und gestartet:
+Nach der Installation wurde der openHAB-Dienst als systemd-Service eingerichtet und initial gestartet:
 
 ```bash
 sudo systemctl enable openhab
