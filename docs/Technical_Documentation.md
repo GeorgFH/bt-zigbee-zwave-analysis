@@ -42,7 +42,7 @@ Als Grundlage des Versuchsaufbaus wurde auf dem Raspberry Pi ein Linux-Betriebss
 
 ### 3.1 Betriebssystem
 
-Im vorliegenden Versuchsaufbau kam **Debian GNU/Linux 12 (bookworm)** in der  64-Bit-Variante zum Einsatz. Nach der Installation des Betriebssystems wurden die grundlegenden Systemfunktionen konfiguriert, insbesondere:
+Im vorliegenden Versuchsaufbau kam **Debian GNU/Linux 12 (bookworm)** in der 64-Bit-Variante zum Einsatz. Nach der Installation des Betriebssystems wurden die grundlegenden Systemfunktionen konfiguriert, insbesondere:
 
 - Einrichtung eines regulären Benutzerkontos
 - Aktivierung der Netzwerkverbindung im lokalen WLAN
